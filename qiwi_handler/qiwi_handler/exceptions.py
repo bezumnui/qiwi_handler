@@ -12,3 +12,6 @@ class TooMuchRows(Exception):
 
 class RequestError(Exception):
     pass
+
+class NoOperationWasFound(Exception):
+    pass
