@@ -6,7 +6,7 @@
 
 ## Пример
 
-##пример:
+## пример:
 
 ```
 from client import Client
@@ -30,12 +30,12 @@ client.run()
 > from qiwi_handler.types import History, UserInfo
 > 
 ## Если вам IDE не помогает в том, что может возвращать функция, или вам надо полностью изучить переменную:
-###https://developer.qiwi.com/ru/qiwi-wallet-personal/index.html#restrictions
-##History (История платежей)
+### https://developer.qiwi.com/ru/qiwi-wallet-personal/index.html#restrictions
+## History (История платежей)
 
-> ###(* - обязательно)
+> ### (* - обязательно)
 > 
-> ###@client.check_pay() - выше показанный обработчик - возвращает History
+> ### @client.check_pay() - выше показанный обработчик - возвращает History
 >
 > > `wallet: str` - (номер кошелька(телефона))\
 > `rows: int = 5` - (Количество последних транзакций),\
@@ -46,7 +46,7 @@ client.run()
 > `next_txn_date: str = None` - Дата транзакции для начала отчета(DateTime URL-encoded), \
 > `next_txn_id: int = None` - Номер транзакции для начала отчета
 
->  ###client.history(wallet: str) - возвращает array[History]
+>  ### client.history(wallet: str) - возвращает array[History]
 >
 > > `message: str` (строгая проверка на содержание окна "Комментарий к переводу"),\
 > `* wallets: list` (список из номеров кошелька (телефона), с который идет парсинг), \
@@ -60,7 +60,7 @@ client.run()
 > `rows_per_update: int = 5` (Количество последних транзакций, которые передаются нобработку хендлеру,
 > больше 50 поставить не выйдет) 
 
-##UserInfo (Профиль пользователя)
+## UserInfo (Профиль пользователя)
 > ###(* - обязательно)
 > 
 > ###client.get_current() - возарвщает UserInfo
