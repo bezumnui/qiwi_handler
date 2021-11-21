@@ -1,11 +1,16 @@
 import setuptools
 
+#   to upload
+#   python3 -m twine upload --repository pypi dist/*
+
+
+
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="qiwi_handler",
-    version="0.0.5",
+    version="0.0.6",
     author="bezumnui",
     author_email="bezumnui.mistikgt@gmail.com",
     description="Пока что - это просто хедлер-декоратор",
