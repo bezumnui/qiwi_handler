@@ -11,9 +11,10 @@ setuptools.setup(
     description="Пока что - это просто хедлер-декоратор",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/bezumnui/QiwiPaymentByBezik",
+    url="https://github.com/bezumnui/qiwi_handler/",
     project_urls={
-        "Bug Tracker": "https://github.com/bezumnui/QiwiPaymentByBezik/issues",
+        "Bug Tracker": "https://github.com/bezumnui/qiwi_handler/issues",
+        "Get Qiwi Token": "https://qiwi.com/api"
     },
     classifiers=[
         "Programming Language :: Python :: 3",
