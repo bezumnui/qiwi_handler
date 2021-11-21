@@ -1,8 +1,6 @@
+from qiwi_handler.utils.methods import MakeDict
 
-class Source:
+
+class Source(MakeDict):
     def __init__(self, source = None):
         self.source = source
-
-
-    def __str__(self):
-        return str(self.__dict__)

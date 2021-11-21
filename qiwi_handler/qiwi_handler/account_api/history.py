@@ -6,7 +6,7 @@ class History:
     def __init__(self, token):
         self.token = token
 
-    async def history(self, *, wallet: str, rows: int,
+    async def history(self, *, wallet: str, rows: int = 5,
                       operation: str = None, sources: list = None,
                       start_date: str = None, end_date: str = None,
                       next_txn_date: str = None, next_txn_id: int = None) -> [history.History]:

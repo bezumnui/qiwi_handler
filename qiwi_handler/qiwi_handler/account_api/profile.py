@@ -6,9 +6,9 @@ class User:
         self.token = token
 
     async def get_current(self,
-                          auth_info_enabled: bool = False,
-                          contract_info_enabled: bool = False,
-                          user_info_enabled: bool = False,
+                          auth_info_enabled: bool = True,
+                          contract_info_enabled: bool = True,
+                          user_info_enabled: bool = True,
                           ):
         url = 'person-profile/v1/profile/current?authInfoEnabled=true'
         '&contractInfoEnabled=true&userInfoEnabled=true'

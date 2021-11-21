@@ -1,6 +1,6 @@
+from qiwi_handler.utils.methods import MakeDict
 
-
-class UserInfo:
+class UserInfo(MakeDict):
     def __init__(self,
                  default_pay_currency: tuple = None,
                  default_pay_source: int = None,
@@ -19,6 +19,3 @@ class UserInfo:
         self.operator = operator
         self.phoneHash = phone_hash
         self.promoEnabled = promo_enabled
-
-    def __str__(self):
-        return str(self.__dict__)

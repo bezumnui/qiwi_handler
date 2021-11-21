@@ -3,3 +3,12 @@ class NotUrlWasSet(Exception):
 
 class InvalidToken(Exception):
     pass
+
+class TooMuchRequests(Exception):
+    pass
+
+class TooMuchRows(Exception):
+    pass
+
+class RequestError(Exception):
+    pass

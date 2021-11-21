@@ -1,6 +1,6 @@
+from qiwi_handler.utils.methods import MakeDict
 
-
-class PassInfo:
+class PassInfo(MakeDict):
     def __init__(self,
                  password_used: bool = None,
                  last_pass_change: str = None,

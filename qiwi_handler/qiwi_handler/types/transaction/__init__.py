@@ -4,8 +4,10 @@ from qiwi_handler.types.transaction.total import Total
 from qiwi_handler.types.transaction.provider import Provider
 from qiwi_handler.types.transaction.source import Source
 from qiwi_handler.types.transaction.extras import Extras
+from qiwi_handler.utils.methods import MakeDict
 
-class Transaction:
+
+class Transaction(MakeDict):
     def __init__(self,
                  txn_id: int = None,
                  person_id: int = None,
@@ -55,39 +57,7 @@ class Transaction:
         self.favoritePaymentEnabled = favorite_payment_enabled
         self.regularPaymentEnabled = regular_payment_enabled
 
-    def __str__(self):
-        sum = str(self.sum)
-        commission = str(self.sum)
-        total = str(self.total)
-        provider = str(self.provider)
-        source = str(self.source)
-        extras = str(self.extras)
 
-        return str(self.__dict__)
-        '''str({
-            "txnId": self.txnId,
-            "personId": self.personId,
-            "date": self.date,
-            "errorCode": self.errorCode,
-            "error": self.error,
-            "type": self.type,
-            "status": self.status,
-            "statusText": self.statusText,
-            "trmTxnId": self.trmTxnId,
-            "account": self.account,
-            "sum": sum,
-            "commission": commission,
-            "total": total,
-            "provider": provider,
-            "source": source,
-            "comment": self.comment,
-            "currencyRate": self.currencyRate,
-            "extras": extras,
-            "chequeReady": self.chequeReady,
-            "bankDocumentAvailable": self.bankDocumentAvailable,
-            "repeatPaymentEnabled": self.repeatPaymentEnabled,
-            "favoritePaymentEnabled": self.favoritePaymentEnabled,
-            "regularPaymentEnabled": self.regularPaymentEnabled
 
-    })
-'''
+
+

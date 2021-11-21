@@ -1,5 +1,7 @@
+from qiwi_handler.utils.methods import MakeDict
 
-class ContractInfo:
+
+class ContractInfo(MakeDict):
     def __init__(self,
                  blocked: bool = None,
                  contract_id: int = None,
@@ -12,3 +14,5 @@ class ContractInfo:
         self.creationDate = creation_date
         self.features = features
         self.identificationInfo = identification_info
+
+

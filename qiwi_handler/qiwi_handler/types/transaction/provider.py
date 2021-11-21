@@ -1,5 +1,6 @@
+from qiwi_handler.utils.methods import MakeDict
 
-class Provider:
+class Provider(MakeDict):
     def __init__(self,
                  id_: int = None,
                  short_name: str = None,
@@ -18,5 +19,3 @@ class Provider:
         self.keys = keys
         self.siteUrl = site_url
 
-    def __str__(self):
-        return str(self.__dict__)

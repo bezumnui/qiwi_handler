@@ -1,5 +1,7 @@
+from qiwi_handler.utils.methods import MakeDict
 
-class MobilePinInfo:
+
+class MobilePinInfo(MakeDict):
     def __init__(self,
                  mobile_pin_used: bool = None,
                  last_mobile_pin_change: bool = None,

@@ -1,8 +1,10 @@
 from qiwi_handler.types.profile.mobile_pin_info import MobilePinInfo
 from qiwi_handler.types.profile.pass_info import PassInfo
 from qiwi_handler.types.profile.pin_info import PinInfo
+from qiwi_handler.utils.methods import MakeDict
 
-class AuthInfo:
+
+class AuthInfo(MakeDict):
     """Запрос возвращает информацию о вашем профиле - наборе пользовательских данных и настроек вашего QIWI кошелька."""
     def __init__(self,
                  person_id: int = None,
@@ -23,3 +25,5 @@ class AuthInfo:
         self.mobilePinInfo = mobile_pin_info
         self.passInfo = pass_info
         self.pinInfo = pin_info
+
+

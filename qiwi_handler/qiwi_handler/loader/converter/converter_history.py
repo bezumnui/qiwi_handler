@@ -16,7 +16,6 @@ def convert_history(json) -> list[history.History]:
         next_txn_id = json["nextTxnId"]
         next_txn_date = json["nextTxnDate"]
     except KeyError as e:
-        print(json)
         if json["errorCode"] == "request.blocked":
             return [history.History()]
         raise e

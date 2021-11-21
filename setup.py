@@ -11,10 +11,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="qiwi_handler",
-    version="0.0.6",
+    version="0.0.8",
     author="bezumnui",
     author_email="bezumnui.mistikgt@gmail.com",
-    description="Пока что - это просто хедлер-декоратор",
+    description="обртка с обработчиком для qiwi",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/bezumnui/qiwi_handler/",
