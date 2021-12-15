@@ -18,7 +18,7 @@ def convert_history(json) -> list[history.History]:
     except KeyError as e:
         if json["errorCode"] == "request.blocked":
             return [history.History()]
-        raise e
+        raise Exception(json)
 
     all_dat = []
     for dat in data:

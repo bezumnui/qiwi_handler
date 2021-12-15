@@ -35,7 +35,7 @@ class CheckPayHandler:
                     "operation": operation
                 }
                 for wallet in wallets:
-                    await asyncio.sleep(1 * 60 / updates_per_minute)
+                    await asyncio.sleep(60 / updates_per_minute)
 
                     url = f'payment-history/v2/persons/{wallet}/payments'
                     req = loader.Request(self.token)

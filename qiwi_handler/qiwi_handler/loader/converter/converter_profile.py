@@ -49,15 +49,18 @@ def convert_profile(json):
         auth_info_obj = AuthInfo()
 
     if json["userInfo"]:
-        user_info = json["user_Info"]
+        user_info = json["userInfo"]
         default_pay_currency = user_info["defaultPayCurrency"]
         default_pay_source = user_info["defaultPaySource"]
-        email = user_info["email"]
+        email = None
         first_txn_id = user_info["firstTxnId"]
         language = user_info["language"]
         operator = user_info["operator"]
         phone_hash = user_info["phoneHash"]
-        promo_enabled = user_info["promoEnabled"]
+        try:
+            promo_enabled = user_info["promoEnabled"]
+        except KeyError:
+            promo_enabled = None
         user_info_obj = UserInfo(
             default_pay_currency,
             default_pay_source,

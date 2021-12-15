@@ -4,6 +4,9 @@
 Для запуска есть client.run(), и await client.idle() соответсвенно. Оба они являются ассинхронными, но run()
 создает новый луп, и не нуждается в запуске с await
 
+## ОЧЕНЬ ВАЖНО!
+### Время на комьютере должно быть правильным!
+### иначе - программа ничего не будет ловить!
 
 ## пример:
 
@@ -12,7 +15,7 @@ from client import Client
 from objects.account_api.types.history import History
 client = Client(TOKEN)
 
-@client.check_pay(wallets=[PHONE NUMBER], check_status=False, 
+@client.check_pay(wallets=[PHONE NUMBER], 
                     amount=5, may_be_bigger=True)
 def func(pay: History):
     print(pay)

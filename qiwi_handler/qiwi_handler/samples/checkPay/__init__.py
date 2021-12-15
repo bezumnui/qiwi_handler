@@ -1,11 +1,12 @@
 from qiwi_handler.handler.check_pay import handler_check_pay
 from qiwi_handler.exceptions import TooMuchRequests, TooMuchRows, NoOperationWasFound
+from qiwi_handler.types import History
 
 class CheckPay:
 
     def check_pay(self, *, message: str = None, wallets: list, amount: float = None,
-                  may_be_bigger: bool = True, check_status: bool = True, operation: str = "ALL", updates_per_minute: int = 50,
-                  rows_per_update: int = 5):
+                  may_be_bigger: bool = True, check_status: bool = True, operation: str = "ALL",
+                  updates_per_minute: int = 25, rows_per_update: int = 5):
         def handler(func):
             proc_operation = ["ALL", "IN", "OUT", "QIWI_CARD"]
             if operation in proc_operation is False:
